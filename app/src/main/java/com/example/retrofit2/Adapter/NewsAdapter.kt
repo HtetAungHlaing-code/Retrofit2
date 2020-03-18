@@ -12,7 +12,7 @@ import com.example.retrofit2.R
 import kotlinx.android.synthetic.main.item_news.view.*
 import java.util.ArrayList
 
-class NewsAdapter(var newsList:ArrayList<Article>):RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
+class NewsAdapter(var newsList:List<Article>):RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
     inner class NewsViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
         fun bind(news: Article){
             itemView.txtTitle.text=news.title
