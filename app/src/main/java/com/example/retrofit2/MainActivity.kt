@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<News>, response: Response<News>) {
                 var newsList=response.body()?.articles
                 Log.d("Response>>>>>",newsList.toString())
-               val newsAdapter=NewsAdapter(newsList as List<Article>)
+               val newsAdapter=NewsAdapter(newsList!!)
                 RecyclerNews.apply {
                     layoutManager=LinearLayoutManager(context)
                     adapter=newsAdapter
